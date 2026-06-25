@@ -1,10 +1,14 @@
-name = "my-nextjs-app"
+name = "aigogoalxx"
 compatibility_date = "2024-11-01"
 compatibility_flags = [ "nodejs_compat" ]
-
-# ระบุตำแหน่งไฟล์หลักที่ได้จากการบิลด์ของ OpenNext
 main = ".open-next/worker.js"
 
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
+
+# 📌 เพิ่มส่วนนี้เข้าไป
+[vars]
+NEXT_PUBLIC_SUPABASE_URL = https://tojkehhzmcmpbeamozhe.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY = sb_publishable_oZhgUEthxET-5_vZaJ7qdw_RHEL-62_
+# หากมีตัวแปรอื่นๆ ที่โปรเจกต์ต้องใช้ ให้ใส่เพิ่มตรงนี้ได้เลยครับ
