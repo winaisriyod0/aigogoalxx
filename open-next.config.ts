@@ -1,5 +1,5 @@
-import { defineConfig } from "@opennextjs/cloudflare";
-
-export default defineConfig({
+const config = {
   dangerouslyUseUnsupportedNextVersion: true,
-});
+};
+
+export default config;
