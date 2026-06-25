@@ -8,5 +8,5 @@ directory = ".open-next/assets"
 binding = "ASSETS"
 
 [vars]
-NEXT_PUBLIC_SUPABASE_URL = "https://tojkehhzmcmpbeamozhe.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_oZhgUEthxET-5_vZaJ7qdw_RHEL-62_"
+NEXT_PUBLIC_SUPABASE_URL = "https://yuuayuthqrlnvlsoeiaq.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1dWF5dXRocXJsbnZsc29laWFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxMzYwODcsImV4cCI6MjA5NzcxMjA4N30.bveEtlOI1EHkExSiHFd9ltIH3Sff_QY_6wLt7Zy1keU"
