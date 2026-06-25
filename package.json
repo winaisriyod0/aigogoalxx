@@ -73,6 +73,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.0"
+    "@opennextjs/cloudflare": "^1.20.0",
+    "wrangler": "^4.105.0"
   }
 }
