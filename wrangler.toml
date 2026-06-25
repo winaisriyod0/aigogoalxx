@@ -1,4 +1,10 @@
-name = "ai-go-goal"
+name = "my-nextjs-app"
 compatibility_date = "2024-11-01"
 compatibility_flags = [ "nodejs_compat" ]
-pages_build_output_dir = ".open-next"
+
+# ระบุตำแหน่งไฟล์หลักที่ได้จากการบิลด์ของ OpenNext
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
