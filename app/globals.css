@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-card: #131c2e;
+  --bg-card-hover: #1a2540;
+  --neon-green: #10b981;
+  --neon-green-dark: #059669;
+  --neon-green-light: #34d399;
+  --gold: #f59e0b;
+  --gold-light: #fbbf24;
+  --miss-red: #ef4444;
+  --blue-accent: #3b82f6;
+  --border-color: rgba(255,255,255,0.08);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --radius: 0.75rem;
+
+  --background: 222 47% 7%;
+  --foreground: 210 40% 95%;
+  --card: 222 47% 10%;
+  --card-foreground: 210 40% 95%;
+  --popover: 222 47% 10%;
+  --popover-foreground: 210 40% 95%;
+  --primary: 160 84% 39%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 40% 18%;
+  --secondary-foreground: 210 40% 95%;
+  --muted: 222 40% 15%;
+  --muted-foreground: 215 20% 55%;
+  --accent: 43 96% 56%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 40% 15%;
+  --input: 222 40% 15%;
+  --ring: 160 84% 39%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-[#0b0f19] text-[#f1f5f9];
+    font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(19, 28, 46, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .glass-dark {
+    background: rgba(11, 15, 25, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  .neon-border {
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    box-shadow: 0 0 12px rgba(16,185,129,0.08), inset 0 0 12px rgba(16,185,129,0.03);
+  }
+  .gold-border {
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    box-shadow: 0 0 12px rgba(245,158,11,0.08);
+  }
+  .card-hover {
+    transition: all 0.2s ease;
+  }
+  .card-hover:hover {
+    background: rgba(26, 37, 64, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px rgba(16,185,129,0.3);
+  }
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(245,158,11,0.3);
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(16,185,129,0.3) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(16,185,129,0.3); border-radius: 2px; }
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .stadium-gradient {
+    background: linear-gradient(135deg, #0b0f19 0%, #0f1f35 50%, #0b0f19 100%);
+  }
+  .hero-glow {
+    background: radial-gradient(ellipse at 50% 0%, rgba(16,185,129,0.12) 0%, transparent 60%);
+  }
+  .rank-gold { color: #f59e0b; }
+  .rank-silver { color: #cbd5e1; }
+  .rank-bronze { color: #b45309; }
+  .badge-exact { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); color: #f59e0b; }
+  .badge-correct { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); color: #10b981; }
+  .badge-miss { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.4); color: #ef4444; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0b0f19; }
+::-webkit-scrollbar-thumb { background: rgba(16,185,129,0.25); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(16,185,129,0.45); }
+
+/* Custom select styles */
+select option { background: #131c2e; color: #f1f5f9; }
