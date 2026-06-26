@@ -1,10 +1,14 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js'
 
-// ถ้าไม่มีค่าในระบบ ให้ใส่ String เปล่าหลอกไว้ก่อน ไม่ให้ระบบ Prerender สั่ง Crash ล้มเหลว
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder-url.supabase.co';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+// ดึงค่ารองรับทั้งโหมด Node.js (Localhost) และ Edge Runtime (Cloudflare Workers)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error("Missing Supabase environment variables!")
+}
+
+export const supabase = createClient(supabaseUrl || '', supabaseAnonKey || '')
 
 export type Profile = {
   id: string;
